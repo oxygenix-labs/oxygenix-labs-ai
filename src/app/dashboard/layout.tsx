@@ -10,7 +10,7 @@ export default function DashboardLayout({
         <div className="min-h-screen bg-background">
             <Sidebar />
             <Header />
-            <main className="pl-64 p-8">
+            <main className="pl-72 p-8">
                 {children}
             </main>
         </div>

@@ -9,38 +9,37 @@ export async function POST(request: Request) {
     // Generate Mock Structured Response
     const mockResponse = {
         id: `RES-${Math.floor(Math.random() * 10000)}`,
-        confidence: 89 + Math.floor(Math.random() * 10),
-        predictions: [
-            {
-                label: `High ${trait} potential`,
-                probability: 92,
-                description: `Genetic markers indicate strong potential for ${trait} in ${environment} conditions.`
-            },
-            {
-                label: "Yield Stability",
-                probability: 85,
-                description: "Predicted yield stability remains within top 15% percentile."
-            },
-            {
-                label: "Resource Efficiency",
-                probability: 78,
-                description: "Estimated 12% reduction in water usage required."
-            }
+        candidateGenes: [
+            { id: "LOC_Os01g12340", name: "DREB1A", confidence: 95 },
+            { id: "LOC_Os05g78900", name: "NAC", confidence: 88 },
+            { id: "LOC_Os03g45670", name: "MYB", confidence: 82 },
         ],
-        markers: [
-            "LOC_Os01g12340: Promoter Region",
-            "LOC_Os03g45670: Coding Sequence",
-            "LOC_Os05g78900: Intron Variant",
-            "LOC_Os02g11111: 3' UTR",
-            "LOC_Os09g22222: Enhancer",
+        geneFunctions: `The identified genes are primarily involved in stress response pathways. DREB1A is a transcription factor that regulates the expression of cold- and dehydration-responsive genes. NAC and MYB families are also critical in mediating drought tolerance through stomatal closure and root architecture modification.`,
+        literature: [
+            { title: "Overexpression of DREB1A improves drought tolerance in transgenic wheat", authors: "Pellegrineschi et al.", year: "2004" },
+            { title: "NAC transcription factors in plant abiotic stress responses", authors: "Nakashima et al.", year: "2012" },
         ],
+        editingStrategy: `Target the promoter region of DREB1A to enhance its expression under drought conditions. Alternatively, use CRISPR-Cas9 to knock out negative regulators of the stress response pathway. Ensure off-target effects are minimized by selecting high-specificity gRNAs.`,
+        guides: [
+            "GCTAGCTAGctagCTAG",
+            "ATCGATCGatcgATCG",
+            "TGCATGCAgcaIGCAT"
+        ],
+        protocol: {
+            steps: [
+                "Design and synthesize gRNAs targeting the DREB1A promoter.",
+                "Clone gRNAs into the binary vector pCAMBIA1300-Cas9.",
+                "Transform Agrobacterium tumefaciens strain EHA105 with the construct.",
+                "Perform Agrobacterium-mediated transformation of rice calli.",
+                "Select transformed calli on hygromycin-containing medium.",
+                "Regenerate plants and screen for mutations using PCR and sequencing."
+            ]
+        },
         rawData: {
             crop,
             trait,
             environment,
             timestamp: new Date().toISOString(),
-            engine_version: "v2.4.1-alpha",
-            compute_time: "2.3s"
         }
     };
 
