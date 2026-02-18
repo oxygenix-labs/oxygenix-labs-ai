@@ -4,7 +4,7 @@ import { Bell, Search, ChevronDown } from "lucide-react";
 
 export default function Header() {
     return (
-        <header className="h-16 border-b border-white/5 bg-[#0A0F0D]/50 backdrop-blur-md sticky top-0 z-30 flex items-center justify-between px-6 pl-64">
+        <header className="h-16 border-b border-white/5 bg-[#0A0F0D]/50 backdrop-blur-md sticky top-0 z-30 flex items-center justify-between px-6 pl-72">
             {/* Search */}
             <div className="relative w-96">
                 <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
