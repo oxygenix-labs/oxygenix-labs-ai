@@ -13,11 +13,13 @@ import {
     Users,
     CreditCard,
     Settings,
-    LogOut
+    LogOut,
+    Microscope
 } from "lucide-react";
 
 const navItems = [
     { name: "Research Workspace", href: "/dashboard", icon: LayoutDashboard },
+    { name: "Research", href: "/dashboard/research", icon: Microscope },
     { name: "Gene Editing", href: "/dashboard/gene-editing", icon: Dna },
     { name: "Hybrid Design", href: "/dashboard/hybrid-design", icon: Sprout },
     { name: "Simulation Lab", href: "/dashboard/simulation", icon: FlaskConical },
