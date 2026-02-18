@@ -40,7 +40,17 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
 }
 
 /* Custom Scrollbar */
