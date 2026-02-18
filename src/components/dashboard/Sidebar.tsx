@@ -24,7 +24,7 @@ const navItems = [
     { name: "Hybrid Design", href: "/dashboard/hybrid-design", icon: Sprout },
     { name: "Simulation Lab", href: "/dashboard/simulation", icon: FlaskConical },
     { name: "Reports", href: "/dashboard/reports", icon: FileText },
-    { name: "Data Library", href: "/dashboard/data", icon: Database },
+    { name: "Data Library", href: "/dashboard/library", icon: Database },
 ];
 
 const secondaryItems = [
