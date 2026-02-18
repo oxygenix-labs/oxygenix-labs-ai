@@ -61,7 +61,7 @@ export default function StrategySelector({ selectedStrategy, onSelect }: Strateg
                         transition={{ delay: i * 0.1 }}
                         onClick={() => onSelect(strategy.id)}
                         className={clsx(
-                            "relative p-4 rounded-xl text-left transition-all duration-300 border group",
+                            "relative p-4 rounded-2xl text-left transition-all duration-300 border group",
                             isSelected
                                 ? `bg-[#0A0F0D] ${strategy.border} ring-1 ring-offset-0 ${strategy.border.replace('border', 'ring')}`
                                 : "bg-[#0A0F0D] border-white/5 hover:border-white/10 hover:bg-white/5"

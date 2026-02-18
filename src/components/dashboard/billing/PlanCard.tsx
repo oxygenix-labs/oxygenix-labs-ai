@@ -33,7 +33,7 @@ export default function PlanCard() {
             </div>
 
             {/* Usage Stats */}
-            <div className="mb-8 p-4 bg-white/5 rounded-xl border border-white/5">
+            <div className="mb-8 p-4 bg-white/5 rounded-2xl border border-white/5">
                 <div className="flex justify-between text-sm mb-2">
                     <span className="text-gray-300">Monthly Queries</span>
                     <span className="text-white font-mono">{usage.toLocaleString()} / {limit.toLocaleString()}</span>

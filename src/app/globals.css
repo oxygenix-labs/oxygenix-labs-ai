@@ -39,15 +39,18 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), sans-serif;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
   button {
     cursor: pointer;
   }
+
   button:disabled {
     cursor: not-allowed;
   }

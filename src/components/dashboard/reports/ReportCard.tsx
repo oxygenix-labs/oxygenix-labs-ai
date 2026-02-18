@@ -24,7 +24,7 @@ export default function ReportCard({ report, onView }: ReportCardProps) {
         <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="group bg-[#0A0F0D] border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors relative overflow-hidden"
+            className="group bg-[#0A0F0D] border border-white/5 rounded-2xl p-5 hover:border-white/10 transition-colors relative overflow-hidden"
         >
             <div className="flex justify-between items-start mb-4">
                 <div className="flex items-center gap-3">
